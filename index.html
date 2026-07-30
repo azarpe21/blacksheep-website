@@ -255,6 +255,56 @@ h2 {
   .dish-head { justify-content: space-between; }
 }
 
+/* DRINKS BAND */
+.drinks-band {
+  background: var(--ink);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 84px 24px;
+  text-align: center;
+}
+.drinks-inner { max-width: 720px; margin: 0 auto; }
+.drinks-kicker {
+  font-size: 11px; letter-spacing: 0.38em; text-transform: uppercase;
+  color: var(--gold); margin-bottom: 20px;
+}
+.drinks-headline {
+  display: flex; align-items: center; justify-content: center; gap: 28px;
+  margin-bottom: 32px;
+}
+.drinks-headline::before,
+.drinks-headline::after {
+  content: ''; height: 1px; flex: 1;
+  background: linear-gradient(to right, transparent, rgba(184,151,46,0.45), transparent);
+  max-width: 160px;
+}
+.drinks-price {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(72px, 13vw, 132px);
+  font-weight: 300; line-height: 0.9;
+  color: var(--gold);
+}
+.drinks-list {
+  list-style: none; display: flex; justify-content: center;
+  flex-wrap: wrap; gap: 14px 40px;
+}
+.drinks-list li {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(19px, 2.4vw, 27px);
+  font-weight: 400; color: var(--text);
+  letter-spacing: 0.06em;
+}
+.drinks-note {
+  margin-top: 34px;
+  font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--muted);
+}
+@media (max-width: 600px) {
+  .drinks-band { padding: 64px 24px; }
+  .drinks-headline::before, .drinks-headline::after { max-width: 48px; }
+  .drinks-list { flex-direction: column; gap: 10px; }
+}
+
 /* ORDER SECTION */
 .order-section {
   text-align: center; padding: 100px 24px;
@@ -486,6 +536,21 @@ footer .f-brand {
       </div>
 
     </div>
+  </div>
+</div>
+
+<div class="drinks-band">
+  <div class="drinks-inner">
+    <p class="drinks-kicker">All Day, Every Day</p>
+    <div class="drinks-headline">
+      <span class="drinks-price">$5</span>
+    </div>
+    <ul class="drinks-list">
+      <li>House Wines</li>
+      <li>Domestic Beers</li>
+      <li>Well Cocktails</li>
+    </ul>
+    <p class="drinks-note">Must be 21 or older with valid ID</p>
   </div>
 </div>
 
